@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C01Selector02.html</title>
+    <style>
+        /* css는 동일하거나 비슷한 내용이 나오면 그걸로 덮어쓴다.
+        요소에 가까울수록 우선순위이다. 즉 내려갈 수록 우선순위가 높다 */
+
+        /* 태그선택자를 통해 h1, input태그에 스타일지정 */
+        h1{color: green;}
+        input{ /* 텍스트 색깔, 크기, 굵기 지정 */
+            color: blue; font-size: 20px; font-weight: bold;
+        }
+
+        /* 
+        8.속성선택자 : 해당 속성이 정의되어진 태그를 선택한다.
+        속성만 기술하거나 속성과 속성값을 동시에 기술할 수 있다.
+        속성값은 "(더블),'(싱글)로 감싸거나 감싸지 않아도 허용된다.
+
+        즉, 속성값은 뭘써도 상관없다.
+        */
+        h1[title]{ /* 속성만 지정함. 속성이 title인...*/
+            border: 1px solid red;
+        }
+        input[type='text']{ /* 속성과 속성값까지 지정함. 속성은 type이고 속성값은 text인...*/
+            color: red; /* 위에서 input을 파란색으로 지정했지만 여기서 덮어써서 빨간색으로 나온다.*/
+        }
+        input[type="tel"]{
+            border: none; /*박스의 모든 테두리를 제거한 후 (상하좌우 모두 테두리를 모두 지워버림)*/
+            border-bottom: 2px solid gray; /* 아래와 오른쪽만 재설정 */
+            border-right: 5px solid purple;
+        }
+        input[type=password]{
+            background-color: yellow;
+        }
+
+        /* 
+        9.정규표현식 : 선택자 속성에 정규표현식을 사용할 수 있다.
+            * : 문자열이 포함됨을 의미 (특정문자열로 포함되는 경우)
+            $ : 끝남을 의미 (특정문자열로 끝나는 경우)
+            ^ : 시작됨을 의미 (특정문자열로 시작되는 경우)
+            = : 같음을 뜻함 (동일한 문자열이 있는 경우)
+        */
+        a[href*='da']{
+            color: #ff6699; font-size: 20px; font-weight: bold;
+        }
+        a[href$=com]{
+            border: 5px green dotted;
+        }
+        a[href^=http]{
+            font-size: 30px;
+        }
+        a[href="www.nate.com"]{
+            background-color: yellow;
+        }
+        
+        /* 
+        10.동위선택자 : 같은 수준의(depth)태그를 선택하거나 바로 아래의
+        태그를 선택한다.
+            ~ : 같은 수준의 태그 전체를 선택
+            + : 같은 수준의 태그들 중 바로 아래 하나만 선택
+        */
+        h2~div{
+            color: blue;
+        }
+        /* div1만 빨간색으로 표현된다. */
+        h2+div{
+            color: red; font-weight: bold; background-color: green;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>title속성이 없는 h1태그</h1>
+    <h1 title="제목태그임">title속성이 있는 h1태그</h1>
+
+    <form action="">
+        이름 : <input type="text"> <br>
+        아이디 : <input type="text"> <br>
+        비밀번호 : <input type="password"> <br>
+        전화번호 : <input type="tel"> <br>
+    </form>
+
+    <h2>정규표현식으로 사용한 선택자</h2>
+    <a href="http://www.naver.com">난 네이버임</a>
+    <br>
+    <a href="http://www.daum.net">난 다음임</a>
+    <br>
+    <a href="www.nate.com">난 네이트임</a>
+    
+    <h2 id="title">동위(~,+) 선택자</h2>
+    <div>div1</div>
+    <div>div2</div>
+    <div>div3</div>
+    <div>div4</div>
+    <div>div5</div>
+
+
+    <!-- ul>(li>a)*5 -->
+    <ul>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+    </ul>
+
+    <!-- ul>(li>a.aaa)*4 -->
+    <ul>
+        <li><a href="" class="aaa"></a></li>
+        <li><a href="" class="aaa"></a></li>
+        <li><a href="" class="aaa"></a></li>
+        <li><a href="" class="aaa"></a></li>
+    </ul>
+
+    <!-- #abc --> <!--div코드는 레이아웃을 위한 것으로 이렇게만써도 에밋 자동으로 해줌-->
+    <div id="abc"></div>
+
+    <!-- div>h1+h2+h3 -->
+    <div>
+        <h1></h1>
+        <h2></h2>
+        <h3></h3>
+    </div>
+
+
+</body>
+</html>
