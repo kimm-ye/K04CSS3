@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C11MediaImport.html</title>
+
+    <!-- 밑에 두개는 같다. -->
+    <!-- <link rel="stylesheet" href="./style/import.css">
+    @import url('./style/import.css'); -->
+    <style>
+        /* 
+        @import
+            -link태그를 대체할 수 있다.
+            -style태그 안에서 사용해야 하고 반드시 최상단에 선언해야 한다.
+            -CSS파일에 오류가 있는 경우 다운로드 하지 않는다.
+        */
+        @import url('./style/import.css');
+        .content{
+            background-color: black; color: red;
+        }
+
+        /* 
+        @media
+            -해당 웹페이지를 디바이스의 종류에 따라 각각 다르게 화면을
+            구성할 수 있도록 해준다.
+            -스크린(모니터)용과 프린터(출력물)용으로 구분할 수 있다.
+        */
+        @media screen {
+            .content{ /* 스크린에서는 배경색은 검은바탕에 흰색글씨로 출력된다. */
+                background-color: black; color: white;
+            }
+        }
+        @media print{
+            .content{ /* 출력했을때는 배경색은 붉은 바탕에 노란색글씨로 출력된다. */
+                background-color: red; color: yellow;
+            }
+        }
+        /* 
+            모든 웹브라우저는 배경색 출력을 허용하지 않는다.
+            허용하려면 인쇄설정으로 들어가서 "배경색인쇄"를 체크해야 한다.
+        */
+    </style>
+</head>
+<body>
+    <h2>media 속성</h2>
+    <div class="content">
+        <p>
+            <h3>호주서 '2만 리터' 긴급 공수‥요소 수입 '가속'</h3>
+            
+            정부가 긴급하게 요소수 수급 계획을 내놓았습니다.
+            <br><br>
+            먼저 이번 주에 군 수송기를 동원해 완제품 요소수 2만 리터를 호주에서 수입해오기로 했습니다.
+            <br><br>
+            개인들이 해외 직접구매를 나서는 상황에서 요소 물량이 풀리는 날만 기다릴 순 없다는 겁니다.
+            <br><br>
+            또 군부대 등 공공부문이 확보하고 있는 요소수 예비물량 일부를 긴급 수요처에 배정하기로 했습니다.
+            <br><br>
+            요소수를 만드는데 필요한 원료인 요소 수입도앞당기기로 했습니다.
+            <br><br>
+            일단 국내 요소 수입선의 97%를 차지하고 있는 중국정부에 이미 계약돼있는 요소 수만 톤의 통관 절차를 신속하게 하는 방법을 계속 협의하기로 했습니다.
+            <br><br>
+            수입 대체선으로 꼽히는 호주와 베트남 등에서도 다음 달까지 수천 톤이 들어오도록 협의하기로 했습니다.
+            <br><br>
+            당장 이 물량이 들어오지 않으면 국내 요소수 생산업체들은 3주 뒤, 재료가 없어 요소수를 못 만들 상황이기 때문입니다.
+            <br><br>
+            통관 절차도 속도를 높이기로 했습니다.
+            <br><br>
+            요소나 요소수가 수입되면 긴급통관으로 가장 먼저 처리하고, 수입 요소수를 판매하는데 필요한 검사기간도 기존 20일에서 최장 닷새로 줄이기로 했습니다.
+            <br><br>
+            또 요소나 요소수 매점매석 행위을 금지하고 환경부, 관세청 등이 합동으로 단속하기로 했습니다.
+            <br><br>
+            중장기적으론 요소 뿐 아니라 특정국가 의존도가 높은 품목을 조사해 수급 불안 가능성을 주기적으로 점검하겠다고 밝혔습니다.
+        </p>
+    </div>
+</body>
+</html>

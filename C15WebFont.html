@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C15WebFont.html</title>
+    <!-- 
+        웹폰트 : 일반적으로 시스템에 설치된 폰트가 아닌, 외부서버에서
+            CDN을 통해 제공되는 폰트로 첫 적용시에는 다운로드 받아서 페이지에 적용한다.
+        CDN(Content Delivery Network)
+            : 콘텐츠를 효율적으로 전달하기 위해 여러 노드를 가진 네트워크를
+            통해 데이터 저장 및 전달하는 시스템을 말한다.
+            jQuery, Bootstrap등을 이용할때도 주로 CDN을 사용한다.
+     -->
+    <!-- 방법1 : style태그 밖에 붙인다.-->
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Sunflower:wght@300&display=swap" rel="stylesheet">
+    <style>
+        /* 
+        방법2 : style태그 안쪽에 붙여넣는다.
+        @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Sunflower:wght@300&display=swap'); 
+        */
+        p{
+            font-family: 'Dongle', sans-serif;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h2>웹폰트 적용하기</h2>
+    <p>
+        미국 테슬라의 최고경영자(CEO) 일론 머스크가 연내 150억달러(약 18조원)에 달하는 
+        <br>
+        세금폭탄을 피하려면 주식을 매각할 수밖에 없을 것이란 분석이 나왔다. 
+        <br>
+        머스크는 앞서 보유 주식 매각에 대해 찬반투표를 진행했다.
+    </p>
+</body>
+</html>
