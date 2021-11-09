@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemberLogin.html</title>
+    <style>
+        fieldset{
+            position: absolute;
+            width: 680px; height: 362px;
+            box-sizing: border-box;
+            border: 1px solid gray;
+        }
+        .logo{
+            position: absolute;
+            top: 50px;
+            left: 230px;
+        }
+        .id_pw{
+            position: absolute;
+            top: 130px; left: 105px;
+            line-height: 55px;
+        }
+        input{
+            width: 335px; height: 45px; font-size: 20px; padding-left: 5px;
+        }
+        .btn{
+            position: absolute;
+            top: 133px; left: 465px;
+        }
+        .btn2{
+            position: absolute;
+            top: 260px; left: 105px;
+        }
+        .btn3{
+            position: absolute;
+            top: 260px; left: 330px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <div>
+            <img src="./login_images/login_logo.gif" alt="로그인로고" class="logo">
+        </div>
+        <br>
+        <table class="id_pw" >
+            <tr>
+                <td>
+                    <input type="text" name="user_id" id="아이디" value="아이디" >
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="password" name="user_pw" id="패스워드" value="1234">
+                </td>
+            </tr>
+
+        </table>
+        <div class="btn">
+            <img src="./login_images/login_bt.gif" alt="로그인버튼">
+        </div>
+        <span class="btn2">
+            <img src="./login_images/login_member.gif" alt="회원가입버튼">
+        </span>
+        <span class="btn3">
+            <img src="./login_images/login_idpw.gif" alt="아이디 비밀번호 찾기">
+        </span>    
+     </fieldset>
+    
+</body>
+</html>

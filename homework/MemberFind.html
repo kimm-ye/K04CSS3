@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemberFind.html</title>
+    <style>
+        *{
+            font-size: 13px;
+        }
+        div{
+            font-weight: bold;
+            color: gray;
+            /* display: inline-block; */
+        }
+        fieldset{
+            position: absolute;
+            border: 8px groove lightgray;
+            height: 220px; width: 675px;
+            box-sizing: content-box;
+        }
+        span.list{
+            color: red;
+            font-weight: bold;
+        }
+        .name{
+            position: absolute;
+            top: 40px; left: 115px;
+        }
+        div>#name{
+            position: relative;
+            left: 20px;
+            width: 280px; height: 20px;
+            border: 1.5px solid lightgray;
+        }
+        .select_menu{
+            position: absolute;
+            top: 85px; left: 115px;
+        }
+        .select_menu input[type=text]{
+            position: relative;
+            left: 15px; height: 20px;
+            border: 1.5px solid lightgray;
+        }
+        #phoneNum{
+            width: 92px; height: 25px;
+            border: 1.5px solid lightgray;
+        }
+        .line{
+            position: absolute;
+            top: 120px; left: 135px;
+            color: lightgray;
+            border-bottom: thin dotted ;
+            width: 400px; height: 10px;
+        }
+        .explain{
+            position: absolute;
+            font-weight: normal;
+            top: 180px; left: 160px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="radio" name="아이디찾기" id="search_id" checked>아이디 찾기
+        &nbsp;&nbsp;&nbsp;
+        <input type="radio" name="비밀번호찾기" id="search_id">비밀번호 찾기
+    </div>
+    <p></p>
+    <fieldset>
+        <div class="name">
+            <span class="list"> ></span> 이름(대표자명) <input type="text" name="이름" id="name">
+        </div>
+        <div class="select_menu">
+            <span class="list"> ></span>
+            <select name="휴대전화" id="phoneNum">
+                <option value="휴대전화" selected>휴대전화</option>
+                <option value="이메일">이메일</option>
+            </select>
+            <input type="text" size="2"> -
+            <input type="text" size="4"> - 
+            <input type="text" size="4">
+        </div>
+        <div class="line">
+        </div>
+        <div class="explain">
+            아이디를 찾기 위해서 이름과 휴대번호 혹은 이메일을 입력하세요
+        </div>
+    </fieldset>
+</body>
+
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+ 
+<body>
+    
+
+    <style>
+        .pw_search{
+            height: 255px;
+            box-sizing: content-box;
+        }
+        .id{
+            position: absolute;
+            top: 40px; left: 115px;
+        }
+        #user_id{
+            position: relative;
+            left: 67px;
+            width: 280px; height: 20px;
+            border: 1.5px solid lightgray;
+        }
+        .name2{
+            position: absolute;
+            top: 80px; left: 115px;
+        }
+        .select_menu2{
+            position: absolute;
+            top: 120px; left: 115px;
+        }
+        .select_menu2 input[type=text]{
+            position: relative;
+            left: 15px; height: 20px;
+            border: 1.5px solid lightgray;
+        }
+        #phoneNum{
+            width: 92px; height: 25px;
+            border: 1.5px solid lightgray;
+        }
+        .line2{
+            position: absolute;
+            top: 165px; left: 135px;
+            color: lightgray;
+            border-bottom: thin dotted ;
+            width: 400px; height: 10px;
+        }
+        .explain2{
+            position: absolute;
+            font-weight: normal;
+            top: 220px; left: 130px;
+        }
+        #domain{
+            height: 25px;
+            border: 1.5px solid lightgray;
+        }
+
+    </style>
+    <div>
+        <input type="radio" name="아이디찾기" id="search_id" >아이디 찾기
+        &nbsp;&nbsp;&nbsp;
+        <input type="radio" name="비밀번호찾기" id="search_id" checked>비밀번호 찾기
+    </div>
+    <p></p>
+    <fieldset class="pw_search">
+        <div class="id">
+            <span class="list"> ></span> 아이디 <input type="text" name="아이디" id="user_id">
+        </div>
+        <div class="name2">
+            <span class="list"> ></span> 이름(대표자명) <input type="text" name="이름" id="name">
+        </div>
+        <div class="select_menu2" >
+            <span class="list"> ></span>
+            <select name="휴대전화" id="phoneNum">
+                <option value="휴대전화" >휴대전화</option>
+                <option value="이메일" selected>이메일</option>
+            </select>
+            
+            <input type="text" size="10"> &nbsp;&nbsp;&nbsp;@<input type="text" size="10" style="left: 1px;">
+            <select name="domain" id="domain">
+                <option value="google" >gmail.com</option>
+                <option value="naver">naver.com</option>
+                <option value="daum">hanmail.net</option>
+                <option value="input" selected>직접입력</option>
+            </select>
+        </div>
+        <div class="line2">
+        </div>
+        <div class="explain2">
+            비밀번호를 찾기 위해서 아이디, 이름과 휴대번호 혹은 이메일을 입력하세요
+        </div>
+    </fieldset>
+</body>
+</html>
